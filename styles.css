@@ -1,0 +1,58 @@
+/* Minimal Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: sans-serif; /* Or choose a specific clean font */
+  overflow: hidden; /* Prevent scrollbars if video slightly overflows */
+  background-color: #000; /* Fallback background color */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Background Video Styling */
+#bg-video {
+  max-width: 80%;
+  max-height: 80%;
+  width: auto;
+  height: auto;
+  /* z-index: -1;  Place it behind other content */
+  /* Optional: Add a filter for better contrast if needed */
+  /* filter: brightness(0.7); */
+}
+
+/* Link Container Styling */
+.link-container {
+  position: absolute; /* Position relative to the body */
+  bottom: 40px; /* Adjust distance from bottom */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  display: flex; /* Arrange links horizontally */
+  gap: 30px; /* Space between icons */
+  z-index: 1; /* Ensure it's above the video */
+}
+
+/* Icon Link Styling */
+.link-container a {
+  color: white; /* Icon color */
+  font-size: 1.8rem; /* Icon size - adjust as needed */
+  text-decoration: none; /* Remove underline */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover Effect */
+.link-container a:hover {
+  opacity: 0.8; /* Slightly fade */
+  transform: scale(1.1); /* Slightly enlarge */
+}
+
+/* Ensure Font Awesome icons display correctly */
+.fab, .fas {
+  display: inline-block;
+}
